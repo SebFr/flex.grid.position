@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:regular,bold');
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.city__card h1 {
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    top: 32px;
+    left: 40px;
+}
+
+.city__card h2 {
+    position: absolute;
+    font-weight: normal;
+    font-size: 32px;
+    color: #ffffff;
+    margin: 0px;
+    top: 18px;
+    left: 32px;
+}
+
+.city__card img {
+    position: absolute;
+    right: 58px;
+    top: 58px;
+}
+
+.city__card ul {
+    position: absolute;
+    font-size: 32px;
+    color: #ffffff;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    bottom: 32px;
+    left: 40px;
+}
+
+.city__card li {
+    list-style-type: none;
+}
+
+li.firstli::after {
+     content: "\00a0\00a0\2027\00a0\00a0";
+}
+
+.city__card {
+    position: relative;
+    background-image: url("./images/cadre.jpg");
+    background-size: cover;
+    width: 800px;
+    height: 600px;
+}
+
+.city__content {
+    width: 640px;
+    height: 176px;
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    right: 80px;
+}
+
+.city__content::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(74, 74, 74, 0.85);
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: 
+    polygon(
+      0% 0%,     /* top left */
+      0% 0%,     /* top left */
+      calc(100% - 25px) 0%,    /* top right */
+      100% calc(0% + 25px),   /* top right */
+      100% 100%,  /* bottom right */
+      100% 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%      /* bottom left */
+    );
+}
+
+.city__button {
+    position: absolute;
+    border: solid 2px #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 337px;
+    height: 77px;
+    right: 80px;
+    bottom: 40px;
+}
+
+.city__button::before {
+    content: '';
+    position: absolute;
+    background-color: #4a90e2;
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+}
+
+.city__button h2::after {
+    content: url(./images/arrow.svg);
+    padding-left: 37px;
+}
+
