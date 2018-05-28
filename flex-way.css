@@ -74,8 +74,8 @@ li.firstli::after {
     polygon(
       0% 0%,     /* top left */
       0% 0%,     /* top left */
-      calc(100% - 25px) 0%,    /* top right */
-      100% calc(0% + 25px),   /* top right */
+      calc(100% - 27px) 0%,    /* top right */
+      100% calc(0% + 27px),   /* top right */
       100% 100%,  /* bottom right */
       100% 100%,  /* bottom right */
       0% 100%,   /* bottom left */

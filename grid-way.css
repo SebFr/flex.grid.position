@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:regular,bold');
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.city__card h1 {
+    position: relative;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
+.city__card h2 {
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+    /* padding-left:32px; */
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.city__card ul {
+    position: relative;
+    font-size: 32px;
+    color: #ffffff;
+    display: inline-flex;
+    margin: 0;
+    padding-left: 0px;
+}
+
+.city__card li {
+    list-style-type: none;
+}
+
+li.firstli::after {
+     content: "\00a0\00a0\2027\00a0\00a0";
+}
+
+.city__card {
+    background-image: url("./images/cadre.jpg");
+    background-size: cover;
+    width: 800px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 80px auto 80px;
+    grid-template-rows: 40px 176px 1fr 76px 40px;
+}
+
+.city__content {
+    position: relative;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 40px 1fr 60px 58px;
+    grid-template-rows: 32px 1fr 1fr 32px;
+}
+
+.city__content::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(74, 74, 74, 0.85);
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: 
+    polygon(
+      0% 0%,     /* top left */
+      0% 0%,     /* top left */
+      calc(100% - 25px) 0%,    /* top right */
+      100% calc(0% + 25px),   /* top right */
+      100% 100%,  /* bottom right */
+      100% 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%      /* bottom left */
+    );
+}
+
+.city__content h1 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.city__content ul {
+    align-self: end;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.city__content img {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+}
+
+.city__button {
+    position: relative;
+    border: solid 2px #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    padding: 18px 32px 20px 32px;
+    justify-self: end;
+}
+
+.city__button::before {
+    content: '';
+    position: absolute;
+    background-color: #4a90e2;
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+}
+
+.city__button h2::after {
+    content: url(./images/arrow.svg);
+    padding-left: 37px;
+}
