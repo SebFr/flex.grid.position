@@ -6,41 +6,8 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.city__card h1 {
-    position: relative;
-    font-size: 48px;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 0;
-}
-
-.city__card h2 {
-    margin: 0;
-    position: relative;
-    font-weight: normal;
-    font-size: 32px;
-    color: #ffffff;
-}
-
-.city__card ul {
-    position: relative;
-    font-size: 32px;
-    color: #ffffff;
-    display: inline-flex;
-    margin: 0;
-    padding-left: 0px;
-}
-
-.city__card li {
-    list-style-type: none;
-}
-
-li.firstli::after {
-     content: "\00a0\00a0\2027\00a0\00a0";
-}
-
 .city__card {
-    background-image: url("./images/cadre.jpg");
+    background-image: url(./images/cadre.jpg);
     background-size: cover;
     width: 800px;
     height: 600px;
@@ -69,35 +36,50 @@ li.firstli::after {
     bottom: 0;
     clip-path: 
     polygon(
-      0% 0%,     /* top left */
-      0% 0%,     /* top left */
-      calc(100% - 25px) 0%,    /* top right */
-      100% calc(0% + 25px),   /* top right */
-      100% 100%,  /* bottom right */
-      100% 100%,  /* bottom right */
-      0% 100%,   /* bottom left */
-      0 100%      /* bottom left */
+      0% 0%,                    /* top left */
+      0% 0%,                    /* top left */
+      calc(100% - 25px) 0%,     /* top right */
+      100% calc(0% + 25px),     /* top right */
+      100% 100%,                /* bottom right */
+      100% 100%,                /* bottom right */
+      0% 100%,                  /* bottom left */
+      0 100%                    /* bottom left */
     );
 }
 
+.city__content::after {
+    content: '';
+    content: url(./images/gift-box.svg);
+    position: relative;
+    grid-area: 2 / 3 / 4 / 3;
+    align-self: center;
+}
+
 .city__content h1 {
-    grid-column-start: 2;
-    grid-row-start: 2;
+    grid-area: 2 / 2 ;
+    position: relative;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
 }
 
 .city__content ul {
+    grid-area: 3 / 2 ;
     align-self: end;
-    grid-column-start: 2;
-    grid-row-start: 3;
+    position: relative;
+    font-size: 32px;
+    color: #ffffff;
+    display: inline-flex;
+    margin: 0;
+    padding-left: 0px;
 }
 
-.city__content img {
-    grid-column-start: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    justify-content: center;
-    align-self: center;
-    position: relative;
+.city__card li {
+    list-style-type: none;
+}
+li.firstli::after {
+    content: "\00a0\00a0\2027\00a0\00a0";
 }
 
 .city__button {
@@ -121,6 +103,14 @@ li.firstli::after {
     right: 0;
     bottom: 0;
     border-radius: 25px;
+}
+
+.city__card h2 {
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+    font-size: 32px;
+    color: #ffffff;
 }
 
 .city__button h2::after {

@@ -26,10 +26,9 @@ body {
     left: 32px;
 }
 
-.city__card img {
-    position: absolute;
-    right: 58px;
-    top: 58px;
+.city__button h2::after {
+    content: url(./images/arrow.svg);
+    padding-left: 37px;
 }
 
 .city__card ul {
@@ -53,7 +52,7 @@ li.firstli::after {
 
 .city__card {
     position: relative;
-    background-image: url("./images/cadre.jpg");
+    background-image: url(./images/cadre.jpg);
     background-size: cover;
     width: 800px;
     height: 600px;
@@ -79,21 +78,33 @@ li.firstli::after {
     bottom: 0;
     clip-path: 
     polygon(
-      0% 0%,     /* top left */
-      0% 0%,     /* top left */
-      calc(100% - 25px) 0%,    /* top right */
-      100% calc(0% + 25px),   /* top right */
-      100% 100%,  /* bottom right */
-      100% 100%,  /* bottom right */
-      0% 100%,   /* bottom left */
-      0 100%      /* bottom left */
+      0% 0%,                    /* top left */
+      0% 0%,                    /* top left */
+      calc(100% - 25px) 0%,     /* top right */
+      100% calc(0% + 25px),     /* top right */
+      100% 100%,                /* bottom right */
+      100% 100%,                /* bottom right */
+      0% 100%,                  /* bottom left */
+      0 100%                    /* bottom left */
     );
 }
+
+.city__content::after {
+    content: '';
+    text-align: right;
+    padding: 58px;
+    content: url(./images/gift-box.svg);
+    position: relative;
+    position: absolute;
+    right: 0px;
+}
+
 
 .city__button {
     position: absolute;
     border: solid 2px #ffffff;
     border-radius: 25px;
+    box-sizing: border-box;
     cursor: pointer;
     width: 337px;
     height: 77px;
@@ -111,10 +122,5 @@ li.firstli::after {
     right: 0;
     bottom: 0;
     border-radius: 25px;
-}
-
-.city__button h2::after {
-    content: url(./images/arrow.svg);
-    padding-left: 37px;
 }
 
