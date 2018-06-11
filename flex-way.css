@@ -7,10 +7,10 @@ body {
 }
 
 .city__card {
-    background-image: url(./images/cadre.jpg);
-    background-size: cover;
     width: 800px;
     height: 600px;
+    background-image: url(./images/cadre.jpg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +28,6 @@ body {
 .city__card h2 {
     position: relative;
     margin: 0;
-    padding-left:32px;
     font-weight: normal;
     font-size: 32px;
     color: #ffffff;
@@ -36,44 +35,38 @@ body {
 
 .city__button h2::after {
     content: url(./images/arrow.svg);
-    padding-left: 37px;
+    padding-left: 31px;
     padding-right: 31px;
 }
 
 .city__card ul {
     position: relative;
-    font-size: 32px;
-    color: #ffffff;
-    display: inline-flex;
     padding: 0 0 32px 40px;
     margin: 0;
-}
-
-.city__card li {
+    font-size: 32px;
     list-style-type: none;
+    color: #ffffff;
+    display: inline-flex;
 }
 
-li.firstli::after {
+.city__card li:first-child::after {
      content: "\00a0\00a0\2027\00a0\00a0";
 }
 
 .city__content {
     position: relative;
+    height: 176px;
+    width: 640px;
     margin: 40px 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 176px;
-    width: 640px;
     flex-wrap: wrap;
-
 }
 
 .city__content::before {
     content: '';
     position: absolute;
-    background-color: rgba(74, 74, 74, 0.85);
-    mix-blend-mode: multiply;
     top: 0;
     left: 0;
     right: 0;
@@ -89,38 +82,41 @@ li.firstli::after {
       0% 100%,                  /* bottom left */
       0 100%                    /* bottom left */
     );
+    background-color: rgba(74, 74, 74, 0.85);
+    mix-blend-mode: multiply;
 }
 
 .city__content::after {
     content: '';
+    position: relative;
     text-align: right;
     padding: 58px;
     content: url(./images/gift-box.svg);
-    position: relative;
 }
 
 .city__button {
     position: relative;
     height: 77px;
+    width: 337px;
     margin: 40px 80px;
+    padding-left: 32px;
+    line-height: 77px;
     align-self: flex-end;
     box-sizing: border-box;
     border: solid 2px #ffffff;
     border-radius: 25px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    text-decoration: none;
 }
 
 .city__button::before {
     content: '';
     position: absolute;
-    background-color: #4a90e2;
-    mix-blend-mode: multiply;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 25px;
+    border-radius: 23px;
+    background-color: #4a90e2;
+    mix-blend-mode: multiply;
 }
 

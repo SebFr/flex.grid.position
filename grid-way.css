@@ -18,9 +18,9 @@ body {
 
 .city__content {
     position: relative;
+    display: grid;
     grid-column-start: 2;
     grid-row-start: 2;
-    display: grid;
     grid-template-columns: 40px 1fr 60px 58px;
     grid-template-rows: 32px 1fr 1fr 32px;
 }
@@ -28,8 +28,6 @@ body {
 .city__content::before {
     content: '';
     position: absolute;
-    background-color: rgba(74, 74, 74, 0.85);
-    mix-blend-mode: multiply;
     top: 0;
     left: 0;
     right: 0;
@@ -45,6 +43,8 @@ body {
       0% 100%,                  /* bottom left */
       0 100%                    /* bottom left */
     );
+    background-color: rgba(74, 74, 74, 0.85);
+    mix-blend-mode: multiply;
 }
 
 .city__content::after {
@@ -73,12 +73,10 @@ body {
     display: inline-flex;
     margin: 0;
     padding-left: 0px;
-}
-
-.city__card li {
     list-style-type: none;
 }
-li.firstli::after {
+
+.city__card li:first-child::after {
     content: "\00a0\00a0\2027\00a0\00a0";
 }
 
@@ -86,23 +84,23 @@ li.firstli::after {
     position: relative;
     border: solid 2px #ffffff;
     border-radius: 25px;
-    cursor: pointer;
     grid-column-start: 2;
     grid-row-start: 4;
     padding: 18px 32px 20px 32px;
     justify-self: end;
+    text-decoration: none;
 }
 
 .city__button::before {
     content: '';
     position: absolute;
-    background-color: #4a90e2;
-    mix-blend-mode: multiply;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 25px;
+    border-radius: 23px;
+    background-color: #4a90e2;
+    mix-blend-mode: multiply;
 }
 
 .city__card h2 {
